@@ -1,0 +1,78 @@
+﻿<Window
+    x:Class="WpfApp1.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:WpfApp1"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Width="800"
+    Height="500"
+    mc:Ignorable="d"
+    Title="MainWindow">
+
+    <Grid>
+        <Button
+            x:Name="btnConnect"
+            Width="75"
+            Margin="10,439,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Click="BtnConnect_Click"
+            Content="Connect" />
+        <Label
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Content="ConnectionId:" Margin="10,408,0,0" />
+        <TextBlock
+            x:Name="tbMain"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Text="Not Connected" Margin="99,413,0,0" />
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="153" Margin="28,25,0,0" Stroke="Black" VerticalAlignment="Top" Width="239"/>
+        <Label Content="Teplota:" HorizontalAlignment="Left" Margin="48,62,0,0" VerticalAlignment="Top"/>
+        <Label Content="Spotřeba:" HorizontalAlignment="Left" Margin="48,93,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="prvniTeplota" HorizontalAlignment="Left" Height="23" Margin="133,65,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="47"/>
+        <TextBox x:Name="prvniSpotreba" HorizontalAlignment="Left" Height="23" Margin="133,96,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="47"/>
+        <Label Content="Obývací pokoj" HorizontalAlignment="Left" Margin="115,34,0,0" VerticalAlignment="Top"/>
+        <Label Content="Doba svícení:" HorizontalAlignment="Left" Margin="48,124,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="prvniSviceni" HorizontalAlignment="Left" Height="23" Margin="133,128,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="47"/>
+        <Label Content="°C" HorizontalAlignment="Left" Margin="185,62,0,0" VerticalAlignment="Top"/>
+        <Label Content="kW" HorizontalAlignment="Left" Margin="185,96,0,0" VerticalAlignment="Top"/>
+        <Label Content="minut" HorizontalAlignment="Left" Margin="185,127,0,0" VerticalAlignment="Top"/>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="153" Margin="323,25,0,0" Stroke="Black" VerticalAlignment="Top" Width="239"/>
+        <Label Content="Teplota:" HorizontalAlignment="Left" Margin="343,62,0,0" VerticalAlignment="Top"/>
+        <Label Content="Spotřeba:" HorizontalAlignment="Left" Margin="343,93,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tretiTeplota" HorizontalAlignment="Left" Height="23" Margin="428,65,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="47"/>
+        <TextBox x:Name="tretiSpotreba" HorizontalAlignment="Left" Height="23" Margin="428,96,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="47"/>
+        <Label Content="Koupelna" HorizontalAlignment="Left" Margin="410,34,0,0" VerticalAlignment="Top"/>
+        <Label Content="Doba svícení:" HorizontalAlignment="Left" Margin="343,124,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tretiSviceni" HorizontalAlignment="Left" Height="23" Margin="428,128,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="47"/>
+        <Label Content="°C" HorizontalAlignment="Left" Margin="480,62,0,0" VerticalAlignment="Top"/>
+        <Label Content="kW" HorizontalAlignment="Left" Margin="480,96,0,0" VerticalAlignment="Top"/>
+        <Label Content="minut" HorizontalAlignment="Left" Margin="480,127,0,0" VerticalAlignment="Top"/>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="153" Margin="28,204,0,0" Stroke="Black" VerticalAlignment="Top" Width="239"/>
+        <Label Content="Teplota:" HorizontalAlignment="Left" Margin="48,241,0,0" VerticalAlignment="Top"/>
+        <Label Content="Spotřeba:" HorizontalAlignment="Left" Margin="48,272,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="druhaTeplota" HorizontalAlignment="Left" Height="23" Margin="133,244,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="47"/>
+        <TextBox x:Name="druhaSpotreba" HorizontalAlignment="Left" Height="23" Margin="133,275,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="47"/>
+        <Label Content="Ložnice" HorizontalAlignment="Left" Margin="115,213,0,0" VerticalAlignment="Top"/>
+        <Label Content="Doba svícení:" HorizontalAlignment="Left" Margin="48,303,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="druhaSviceni" HorizontalAlignment="Left" Height="23" Margin="133,307,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="47"/>
+        <Label Content="°C" HorizontalAlignment="Left" Margin="185,241,0,0" VerticalAlignment="Top"/>
+        <Label Content="kW" HorizontalAlignment="Left" Margin="185,275,0,0" VerticalAlignment="Top"/>
+        <Label Content="minut" HorizontalAlignment="Left" Margin="185,306,0,0" VerticalAlignment="Top"/>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="153" Margin="323,205,0,0" Stroke="Black" VerticalAlignment="Top" Width="239"/>
+        <Label Content="Teplota:" HorizontalAlignment="Left" Margin="343,242,0,0" VerticalAlignment="Top"/>
+        <Label Content="Spotřeba:" HorizontalAlignment="Left" Margin="343,273,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="ctvrtaTeplota" HorizontalAlignment="Left" Height="23" Margin="428,245,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="47"/>
+        <TextBox x:Name="ctvrtaSpotreba" HorizontalAlignment="Left" Height="23" Margin="428,276,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="47"/>
+        <Label Content="Kuchyň" HorizontalAlignment="Left" Margin="410,214,0,0" VerticalAlignment="Top"/>
+        <Label Content="Doba svícení:" HorizontalAlignment="Left" Margin="343,304,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="ctvrtaSviceni" HorizontalAlignment="Left" Height="23" Margin="428,308,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="47"/>
+        <Label Content="°C" HorizontalAlignment="Left" Margin="480,242,0,0" VerticalAlignment="Top"/>
+        <Label Content="kW" HorizontalAlignment="Left" Margin="480,276,0,0" VerticalAlignment="Top"/>
+        <Label Content="minut" HorizontalAlignment="Left" Margin="480,307,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+
+</Window>
