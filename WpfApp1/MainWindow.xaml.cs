@@ -73,5 +73,65 @@ namespace WpfApp1
                 
             }
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                using (ISDatabaseEntities context = new ISDatabaseEntities())
+                {
+                    Cidla cus = new Cidla()
+                    {
+                        mistnost = obyvaciPokojLabel.Content.ToString(),
+                        teplota = Int32.Parse(prvniTeplota.Text),
+                        spotreba = Int32.Parse(prvniSpotreba.Text),
+                        sviceni = Int32.Parse(prvniSviceni.Text),
+                        datum = DateTime.Now
+                    };
+                    context.Cidlas.Add(cus);
+                    context.SaveChanges();
+                }
+                using (ISDatabaseEntities context = new ISDatabaseEntities())
+                {
+                    Cidla cus = new Cidla()
+                    {
+                        mistnost = LozniceLabel.Content.ToString(),
+                        teplota = Int32.Parse(druhaTeplota.Text),
+                        spotreba = Int32.Parse(druhaSpotreba.Text),
+                        sviceni = Int32.Parse(druhaSviceni.Text),
+                        datum = DateTime.Now
+                    };
+                    context.Cidlas.Add(cus);
+                    context.SaveChanges();
+                }
+                using (ISDatabaseEntities context = new ISDatabaseEntities())
+                {
+                    Cidla cus = new Cidla()
+                    {
+                        mistnost = KoupelnaLabel.Content.ToString(),
+                        teplota = Int32.Parse(tretiTeplota.Text),
+                        spotreba = Int32.Parse(tretiSpotreba.Text),
+                        sviceni = Int32.Parse(tretiSviceni.Text),
+                        datum = DateTime.Now
+                    };
+                    context.Cidlas.Add(cus);
+                    context.SaveChanges();
+                }
+                using (ISDatabaseEntities context = new ISDatabaseEntities())
+                {
+                    Cidla cus = new Cidla()
+                    {
+                        mistnost = KuchynLabel.Content.ToString(),
+                        teplota = Int32.Parse(ctvrtaTeplota.Text),
+                        spotreba = Int32.Parse(ctvrtaSpotreba.Text),
+                        sviceni = Int32.Parse(ctvrtaSviceni.Text),
+                        datum = DateTime.Now
+                    };
+                    context.Cidlas.Add(cus);
+                    context.SaveChanges();
+                }
+            } catch (Exception ex) { MessageBox.Show("Nejsou zadány všechny údaje z čidel"); }
+
+        }
     }
 }

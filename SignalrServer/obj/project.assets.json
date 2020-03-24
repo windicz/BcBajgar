@@ -12091,11 +12091,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Tomas.DESKTOP-AOOSVV9\\Desktop\\swinz projekt new\\WPFSignalr\\SignalrServer\\SignalrServer.csproj",
+      "projectUniqueName": "C:\\Users\\Tomas.DESKTOP-AOOSVV9\\Desktop\\Nová složka\\swinz projekt new\\WPFSignalr\\SignalrServer\\SignalrServer.csproj",
       "projectName": "SignalrServer",
-      "projectPath": "C:\\Users\\Tomas.DESKTOP-AOOSVV9\\Desktop\\swinz projekt new\\WPFSignalr\\SignalrServer\\SignalrServer.csproj",
+      "projectPath": "C:\\Users\\Tomas.DESKTOP-AOOSVV9\\Desktop\\Nová složka\\swinz projekt new\\WPFSignalr\\SignalrServer\\SignalrServer.csproj",
       "packagesPath": "C:\\Users\\Tomas.DESKTOP-AOOSVV9\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Tomas.DESKTOP-AOOSVV9\\Desktop\\swinz projekt new\\WPFSignalr\\SignalrServer\\obj\\",
+      "outputPath": "C:\\Users\\Tomas.DESKTOP-AOOSVV9\\Desktop\\Nová složka\\swinz projekt new\\WPFSignalr\\SignalrServer\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -15,3 +15,20 @@ C:\Users\Tomas.DESKTOP-AOOSVV9\Desktop\SignalrWpfClient-master\WPFSignalr\Signal
 C:\Users\Tomas.DESKTOP-AOOSVV9\Desktop\SignalrWpfClient-master\WPFSignalr\SignalrServer\obj\Debug\netcoreapp2.2\SignalrServer.RazorTargetAssemblyInfo.cache
 C:\Users\Tomas.DESKTOP-AOOSVV9\Desktop\SignalrWpfClient-master\WPFSignalr\SignalrServer\obj\Debug\netcoreapp2.2\SignalrServer.dll
 C:\Users\Tomas.DESKTOP-AOOSVV9\Desktop\SignalrWpfClient-master\WPFSignalr\SignalrServer\obj\Debug\netcoreapp2.2\SignalrServer.pdb
+C:\Users\Tomas.DESKTOP-AOOSVV9\Desktop\swinz projekt new\WPFSignalr\SignalrServer\bin\Debug\netcoreapp2.2\appsettings.Development.json
+C:\Users\Tomas.DESKTOP-AOOSVV9\Desktop\swinz projekt new\WPFSignalr\SignalrServer\bin\Debug\netcoreapp2.2\appsettings.json
+C:\Users\Tomas.DESKTOP-AOOSVV9\Desktop\swinz projekt new\WPFSignalr\SignalrServer\bin\Debug\netcoreapp2.2\libman.json
+C:\Users\Tomas.DESKTOP-AOOSVV9\Desktop\swinz projekt new\WPFSignalr\SignalrServer\bin\Debug\netcoreapp2.2\Properties\launchSettings.json
+C:\Users\Tomas.DESKTOP-AOOSVV9\Desktop\swinz projekt new\WPFSignalr\SignalrServer\bin\Debug\netcoreapp2.2\SignalrServer.deps.json
+C:\Users\Tomas.DESKTOP-AOOSVV9\Desktop\swinz projekt new\WPFSignalr\SignalrServer\bin\Debug\netcoreapp2.2\SignalrServer.runtimeconfig.json
+C:\Users\Tomas.DESKTOP-AOOSVV9\Desktop\swinz projekt new\WPFSignalr\SignalrServer\bin\Debug\netcoreapp2.2\SignalrServer.runtimeconfig.dev.json
+C:\Users\Tomas.DESKTOP-AOOSVV9\Desktop\swinz projekt new\WPFSignalr\SignalrServer\bin\Debug\netcoreapp2.2\SignalrServer.dll
+C:\Users\Tomas.DESKTOP-AOOSVV9\Desktop\swinz projekt new\WPFSignalr\SignalrServer\bin\Debug\netcoreapp2.2\SignalrServer.pdb
+C:\Users\Tomas.DESKTOP-AOOSVV9\Desktop\swinz projekt new\WPFSignalr\SignalrServer\obj\Debug\netcoreapp2.2\SignalrServer.csprojAssemblyReference.cache
+C:\Users\Tomas.DESKTOP-AOOSVV9\Desktop\swinz projekt new\WPFSignalr\SignalrServer\obj\Debug\netcoreapp2.2\SignalrServer.RazorAssemblyInfo.cache
+C:\Users\Tomas.DESKTOP-AOOSVV9\Desktop\swinz projekt new\WPFSignalr\SignalrServer\obj\Debug\netcoreapp2.2\SignalrServer.RazorAssemblyInfo.cs
+C:\Users\Tomas.DESKTOP-AOOSVV9\Desktop\swinz projekt new\WPFSignalr\SignalrServer\obj\Debug\netcoreapp2.2\SignalrServer.AssemblyInfoInputs.cache
+C:\Users\Tomas.DESKTOP-AOOSVV9\Desktop\swinz projekt new\WPFSignalr\SignalrServer\obj\Debug\netcoreapp2.2\SignalrServer.AssemblyInfo.cs
+C:\Users\Tomas.DESKTOP-AOOSVV9\Desktop\swinz projekt new\WPFSignalr\SignalrServer\obj\Debug\netcoreapp2.2\SignalrServer.RazorTargetAssemblyInfo.cache
+C:\Users\Tomas.DESKTOP-AOOSVV9\Desktop\swinz projekt new\WPFSignalr\SignalrServer\obj\Debug\netcoreapp2.2\SignalrServer.dll
+C:\Users\Tomas.DESKTOP-AOOSVV9\Desktop\swinz projekt new\WPFSignalr\SignalrServer\obj\Debug\netcoreapp2.2\SignalrServer.pdb

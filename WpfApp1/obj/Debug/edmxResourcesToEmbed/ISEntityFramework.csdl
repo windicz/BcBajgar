@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ISDatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Cidla">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="mistnost" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="teplota" Type="Int32" Nullable="false" />
+    <Property Name="spotreba" Type="Int32" Nullable="false" />
+    <Property Name="sviceni" Type="Int32" Nullable="false" />
+    <Property Name="datum" Type="DateTime" Nullable="false" Precision="0" />
+  </EntityType>
+  <EntityType Name="Topeni">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="datum" Type="DateTime" Nullable="false" Precision="0" />
+  </EntityType>
+  <EntityContainer Name="ISDatabaseEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Cidlas" EntityType="Self.Cidla" />
+    <EntitySet Name="Topenis" EntityType="Self.Topeni" />
+  </EntityContainer>
+</Schema>
