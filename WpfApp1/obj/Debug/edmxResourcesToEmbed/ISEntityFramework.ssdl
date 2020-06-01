@@ -10,6 +10,7 @@
     <Property Name="spotreba" Type="int" Nullable="false" />
     <Property Name="sviceni" Type="int" Nullable="false" />
     <Property Name="datum" Type="date" Nullable="false" />
+    <Property Name="TopeniId" Type="int" />
   </EntityType>
   <EntityType Name="Topeni">
     <Key>
@@ -17,9 +18,26 @@
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="datum" Type="date" Nullable="false" />
+    <Property Name="spusteni" Type="nvarchar" MaxLength="50" />
   </EntityType>
+  <Association Name="FK_Topeni_Cidla">
+    <End Role="Topeni" Type="Self.Topeni" Multiplicity="0..1" />
+    <End Role="Cidla" Type="Self.Cidla" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Topeni">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Cidla">
+        <PropertyRef Name="TopeniId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityContainer Name="ISDatabaseModelStoreContainer">
     <EntitySet Name="Cidla" EntityType="Self.Cidla" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Topeni" EntityType="Self.Topeni" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Topeni_Cidla" Association="Self.FK_Topeni_Cidla">
+      <End Role="Topeni" EntitySet="Topeni" />
+      <End Role="Cidla" EntitySet="Cidla" />
+    </AssociationSet>
   </EntityContainer>
 </Schema>

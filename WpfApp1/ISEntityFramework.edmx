@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="ISDatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="ISDatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Cidla">
           <Key>
             <PropertyRef Name="Id" />
@@ -15,6 +15,7 @@
           <Property Name="spotreba" Type="int" Nullable="false" />
           <Property Name="sviceni" Type="int" Nullable="false" />
           <Property Name="datum" Type="date" Nullable="false" />
+          <Property Name="TopeniId" Type="int" />
         </EntityType>
         <EntityType Name="Topeni">
           <Key>
@@ -22,13 +23,29 @@
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="datum" Type="date" Nullable="false" />
+          <Property Name="spusteni" Type="nvarchar" MaxLength="50" />
         </EntityType>
+        <Association Name="FK_Topeni_Cidla">
+          <End Role="Topeni" Type="Self.Topeni" Multiplicity="0..1" />
+          <End Role="Cidla" Type="Self.Cidla" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Topeni">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Cidla">
+              <PropertyRef Name="TopeniId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="ISDatabaseModelStoreContainer">
           <EntitySet Name="Cidla" EntityType="Self.Cidla" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Topeni" EntityType="Self.Topeni" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Topeni_Cidla" Association="Self.FK_Topeni_Cidla">
+            <End Role="Topeni" EntitySet="Topeni" />
+            <End Role="Cidla" EntitySet="Cidla" />
+          </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="ISDatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -36,24 +53,44 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="mistnost" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="teplota" Type="Int32" Nullable="false" />
-          <Property Name="spotreba" Type="Int32" Nullable="false" />
-          <Property Name="sviceni" Type="Int32" Nullable="false" />
-          <Property Name="datum" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
+          <Property Name="mistnost" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="teplota" Nullable="false" Type="Int32" />
+          <Property Name="spotreba" Nullable="false" Type="Int32" />
+          <Property Name="sviceni" Nullable="false" Type="Int32" />
+          <Property Name="datum" Nullable="false" Precision="0" Type="DateTime" />
+          <Property Name="TopeniId" Type="Int32" />
+          <NavigationProperty Name="Topeni" Relationship="ISDatabaseModel.FK_Topeni_Cidla" FromRole="Cidla" ToRole="Topeni" />
         </EntityType>
         <EntityType Name="Topeni">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="datum" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
+          <Property Name="datum" Nullable="false" Precision="0" Type="DateTime" />
+          <NavigationProperty Name="Cidlas" Relationship="ISDatabaseModel.FK_Topeni_Cidla" FromRole="Topeni" ToRole="Cidla" />
+          <Property Name="spusteni" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityContainer Name="ISDatabaseEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Cidlas" EntityType="Self.Cidla" />
           <EntitySet Name="Topenis" EntityType="Self.Topeni" />
+          <AssociationSet Name="FK_Topeni_Cidla" Association="ISDatabaseModel.FK_Topeni_Cidla">
+            <End Role="Topeni" EntitySet="Topenis" />
+            <End Role="Cidla" EntitySet="Cidlas" />
+          </AssociationSet>
         </EntityContainer>
+        <Association Name="FK_Topeni_Cidla">
+          <End Type="ISDatabaseModel.Topeni" Role="Topeni" Multiplicity="0..1" />
+          <End Type="ISDatabaseModel.Cidla" Role="Cidla" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Topeni">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Cidla">
+              <PropertyRef Name="TopeniId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -63,6 +100,7 @@
           <EntitySetMapping Name="Cidlas">
             <EntityTypeMapping TypeName="ISDatabaseModel.Cidla">
               <MappingFragment StoreEntitySet="Cidla">
+                <ScalarProperty Name="TopeniId" ColumnName="TopeniId" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="mistnost" ColumnName="mistnost" />
                 <ScalarProperty Name="teplota" ColumnName="teplota" />
@@ -75,6 +113,7 @@
           <EntitySetMapping Name="Topenis">
             <EntityTypeMapping TypeName="ISDatabaseModel.Topeni">
               <MappingFragment StoreEntitySet="Topeni">
+                <ScalarProperty Name="spusteni" ColumnName="spusteni" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="datum" ColumnName="datum" />
               </MappingFragment>

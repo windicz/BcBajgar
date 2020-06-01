@@ -14,7 +14,17 @@ namespace WpfApp1
     
     public partial class Topeni
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Topeni()
+        {
+            this.Cidlas = new HashSet<Cidla>();
+        }
+    
         public int Id { get; set; }
         public System.DateTime datum { get; set; }
+        public string spusteni { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Cidla> Cidlas { get; set; }
     }
 }

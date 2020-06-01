@@ -20,5 +20,8 @@ namespace WpfApp1
         public int spotreba { get; set; }
         public int sviceni { get; set; }
         public System.DateTime datum { get; set; }
+        public Nullable<int> TopeniId { get; set; }
+    
+        public virtual Topeni Topeni { get; set; }
     }
 }

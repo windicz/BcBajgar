@@ -4,6 +4,7 @@
     <EntitySetMapping Name="Cidlas">
       <EntityTypeMapping TypeName="ISDatabaseModel.Cidla">
         <MappingFragment StoreEntitySet="Cidla">
+          <ScalarProperty Name="TopeniId" ColumnName="TopeniId" />
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="mistnost" ColumnName="mistnost" />
           <ScalarProperty Name="teplota" ColumnName="teplota" />
@@ -16,6 +17,7 @@
     <EntitySetMapping Name="Topenis">
       <EntityTypeMapping TypeName="ISDatabaseModel.Topeni">
         <MappingFragment StoreEntitySet="Topeni">
+          <ScalarProperty Name="spusteni" ColumnName="spusteni" />
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="datum" ColumnName="datum" />
         </MappingFragment>

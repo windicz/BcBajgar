@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SignalrServer", "SignalrSer
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp1", "WpfApp1\WpfApp1.csproj", "{18F96A2B-DE9A-47BD-8066-7DC5CBED6A79}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest", "UnitTest\UnitTest.csproj", "{0FD5FC81-28C7-4CFB-BA96-5C54421FE9D2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{18F96A2B-DE9A-47BD-8066-7DC5CBED6A79}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{18F96A2B-DE9A-47BD-8066-7DC5CBED6A79}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{18F96A2B-DE9A-47BD-8066-7DC5CBED6A79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FD5FC81-28C7-4CFB-BA96-5C54421FE9D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FD5FC81-28C7-4CFB-BA96-5C54421FE9D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FD5FC81-28C7-4CFB-BA96-5C54421FE9D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FD5FC81-28C7-4CFB-BA96-5C54421FE9D2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
