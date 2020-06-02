@@ -10,17 +10,14 @@ namespace WpfApp1
     {
         public int Convertor(string teplota)
         {
-
-            
+                        
             int number1 = 0;
             bool canConvert = int.TryParse(teplota, out number1);
             if (canConvert == true)
                 return Int32.Parse(teplota);
             else
                 throw new ArgumentException();
-
-
-           
+                       
         }
     }
 }

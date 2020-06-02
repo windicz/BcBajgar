@@ -20,7 +20,7 @@
             Margin="10,439,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
-            Click="BtnConnect_Click"
+            Click="Button_Click_Connect"
             Content="Connect" />
                     <Label
             HorizontalAlignment="Left"
@@ -75,7 +75,7 @@
                     <Label Content="°C" HorizontalAlignment="Left" Margin="480,242,0,0" VerticalAlignment="Top"/>
                     <Label Content="kW" HorizontalAlignment="Left" Margin="480,276,0,0" VerticalAlignment="Top"/>
                     <Label Content="minut" HorizontalAlignment="Left" Margin="480,307,0,0" VerticalAlignment="Top"/>
-                    <Button Content="Ulozit" HorizontalAlignment="Left" Margin="487,375,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+                    <Button Content="Ulozit" HorizontalAlignment="Left" Margin="487,375,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_Sensors"/>
                     <Label Content="Zdej požadovanou teplotu:" HorizontalAlignment="Left" Margin="581,34,0,0" VerticalAlignment="Top"/>
                     <Label Content="Obývací pokoj:" HorizontalAlignment="Left" Margin="574,70,0,0" VerticalAlignment="Top"/>
                     <Label Content="Koupelna:" HorizontalAlignment="Left" Margin="600,102,0,0" VerticalAlignment="Top"/>
@@ -89,7 +89,7 @@
                     <Label Content="°C" HorizontalAlignment="Left" Margin="726,104,0,0" VerticalAlignment="Top"/>
                     <Label Content="°C" HorizontalAlignment="Left" Margin="726,133,0,0" VerticalAlignment="Top"/>
                     <Label Content="°C" HorizontalAlignment="Left" Margin="726,163,0,0" VerticalAlignment="Top"/>
-                    <Button Content="Zadat teplotu" HorizontalAlignment="Left" Margin="653,198,0,0" VerticalAlignment="Top" Width="81" Click="ZvolitTeplotu"/>
+                    <Button Content="Zadat teplotu" HorizontalAlignment="Left" Margin="653,198,0,0" VerticalAlignment="Top" Width="81" Click="Button_Click_SetTemperature"/>
                     <Label Content="Topení je" HorizontalAlignment="Left" Margin="753,74,0,0" VerticalAlignment="Top" Width="57"/>
                     <Label Content="Topení je" HorizontalAlignment="Left" Margin="753,106,0,0" VerticalAlignment="Top" Width="57"/>
                     <Label Content="Topení je" HorizontalAlignment="Left" Margin="753,135,0,0" VerticalAlignment="Top" Width="57"/>
@@ -99,7 +99,7 @@
                     <Label x:Name="TopeniJeLoznice" Content="vypnuté." HorizontalAlignment="Left" Margin="810,135,0,0" VerticalAlignment="Top" Width="68" Height="26"/>
                     <Label x:Name="TopeniJeKuchyn" Content="vypnuté." HorizontalAlignment="Left" Margin="810,163,0,0" VerticalAlignment="Top" Width="68"/>
                     <TextBox x:Name="Tmp" HorizontalAlignment="Left" Height="23" Margin="705,434,0,0" Visibility="Hidden" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-                    <Label x:Name="StatistikaTopeni" Content="" HorizontalAlignment="Left" Margin="758,241,0,0" VerticalAlignment="Top" Loaded="StatistikaTopeni_Loaded" Width="36" FontSize="20"/>
+                    <Label x:Name="StatistikaTopeni" Content="" HorizontalAlignment="Left" Margin="758,241,0,0" VerticalAlignment="Top" Loaded="Statistics_LoadHeating" Width="36" FontSize="20"/>
                     <Label Content="Počet dní v roce,&#xD;&#xA;kdy bylo nutno spustit vytápění:" HorizontalAlignment="Left" Margin="574,232,0,0" VerticalAlignment="Top" Height="49" Width="184"/>
                 </Grid>
             </TabItem>
@@ -109,11 +109,11 @@
                         <TabItem Header="Obývací pokoj" Margin="-2,-2,0,-19">
                             <Grid Background="#FFE5E5E5">
                                 <Label Content="Aktuální teplota:" FontSize="15" HorizontalAlignment="Left" Margin="257,70,0,0" VerticalAlignment="Top"/>
-                                <TextBox x:Name="DetailTeplotaObyvak" FontSize="15" HorizontalAlignment="Left" Height="23" Margin="419,74,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="32" Loaded="DetailTeplotaObyvak_Loaded"/>
+                                <TextBox x:Name="DetailTeplotaObyvak" FontSize="15" HorizontalAlignment="Left" Height="23" Margin="419,74,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="32" Loaded="DetailLivingRoomTemperatureShow"/>
                                 <Label Content="Aktuální spotřeba:" FontSize="15" HorizontalAlignment="Left" Margin="245,117,0,0" VerticalAlignment="Top"/>
-                                <TextBox x:Name="DetailSpotrebaObyvak" HorizontalAlignment="Left" FontSize="15" Height="23" Margin="419,120,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="32" Loaded="DetailSpotrebaObyvak_Loaded"/>
+                                <TextBox x:Name="DetailSpotrebaObyvak" HorizontalAlignment="Left" FontSize="15" Height="23" Margin="419,120,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="32" Loaded="DetailConsumptionLivingRoomShow"/>
                                 <Label Content="Průměrná doba svícení za poslední týden:" FontSize="15" HorizontalAlignment="Left" Margin="91,174,0,0" VerticalAlignment="Top"/>
-                                <Label x:Name="sviceniLabelStatistika" Content="" FontSize="15" HorizontalAlignment="Left" Margin="380,174,0,0" VerticalAlignment="Top" Width="71" Loaded="sviceniLabelStatistika_Loaded"/>
+                                <Label x:Name="sviceniLabelStatistika" Content="" FontSize="15" HorizontalAlignment="Left" Margin="380,174,0,0" VerticalAlignment="Top" Width="71" Loaded="LightingLabelStatisticsLivingRoom"/>
                                 <Label Content="°C" HorizontalAlignment="Left" FontSize="15" Margin="456,70,0,0" VerticalAlignment="Top"/>
                                 <Label Content="kW" FontSize="15" HorizontalAlignment="Left" Margin="459,117,0,0" VerticalAlignment="Top"/>
                                 <Label Content="minut" FontSize="15" HorizontalAlignment="Left" Margin="456,174,0,0" VerticalAlignment="Top"/>
@@ -122,18 +122,18 @@
                                 <TextBox x:Name="sliderTextboxObyvak" HorizontalAlignment="Left" Height="31" Margin="342,278,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="33" FontSize="20" Text="{Binding ElementName=slider,Path=Value}"/>
                                 <Label Content="°C" HorizontalAlignment="Left" FontSize="20" Margin="380,274,0,0" VerticalAlignment="Top"/>
                                 <Label Content="Topení je" HorizontalAlignment="Left" FontSize="15" Margin="497,340,0,0" VerticalAlignment="Top"/>
-                                <Label x:Name="detailObyvakLabel" Content="vypnuto." FontSize="15" HorizontalAlignment="Left" Margin="567,340,0,0" VerticalAlignment="Top" Width="74" Loaded="detailObyvakLabel_Loaded"/>
-                                <Button Content="Zadat teplotu místnosti" HorizontalAlignment="Left" Margin="284,408,0,0" VerticalAlignment="Top" Width="167" Click="Button_Click_2" Height="28" FontSize="15"/>
+                                <Label x:Name="detailObyvakLabel" Content="vypnuto." FontSize="15" HorizontalAlignment="Left" Margin="567,340,0,0" VerticalAlignment="Top" Width="74" Loaded="DetailLivingRoomLabelShow"/>
+                                <Button Content="Zadat teplotu místnosti" HorizontalAlignment="Left" Margin="284,408,0,0" VerticalAlignment="Top" Width="167" Click="Button_Click_LivingRoom" Height="28" FontSize="15"/>
                             </Grid>
                         </TabItem>
                         <TabItem Header="Ložnice" Margin="-3,19,1,-39">
                             <Grid Background="#FFE5E5E5">
                                 <Label Content="Aktuální teplota:" FontSize="15" HorizontalAlignment="Left" Margin="257,70,0,0" VerticalAlignment="Top"/>
-                                <TextBox x:Name="DetailTeplotaLoznice" FontSize="15" HorizontalAlignment="Left" Height="23" Margin="419,74,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="32" Loaded="DetailTeplotaLoznice_Loaded"/>
+                                <TextBox x:Name="DetailTeplotaLoznice" FontSize="15" HorizontalAlignment="Left" Height="23" Margin="419,74,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="32" Loaded="DetailTemperatureBedroomShow"/>
                                 <Label Content="Aktuální spotřeba:" FontSize="15" HorizontalAlignment="Left" Margin="245,117,0,0" VerticalAlignment="Top"/>
-                                <TextBox x:Name="DetailSpotrebaLoznice" HorizontalAlignment="Left" FontSize="15" Height="23" Margin="419,120,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="32" Loaded="DetailSpotrebaLoznice_Loaded"/>
+                                <TextBox x:Name="DetailSpotrebaLoznice" HorizontalAlignment="Left" FontSize="15" Height="23" Margin="419,120,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="32" Loaded="DetailConsumptionBedroomShow"/>
                                 <Label Content="Průměrná doba svícení za poslední týden:" FontSize="15" HorizontalAlignment="Left" Margin="91,174,0,0" VerticalAlignment="Top"/>
-                                <Label x:Name="sviceniLabelStatistika2" Content="" FontSize="15" HorizontalAlignment="Left" Margin="380,174,0,0" VerticalAlignment="Top" Width="71" Loaded="sviceniLabelStatistika2_Loaded"/>
+                                <Label x:Name="sviceniLabelStatistika2" Content="" FontSize="15" HorizontalAlignment="Left" Margin="380,174,0,0" VerticalAlignment="Top" Width="71" Loaded="LightingLabelStatisticsBedroom"/>
                                 <Label Content="°C" HorizontalAlignment="Left" FontSize="15" Margin="456,70,0,0" VerticalAlignment="Top"/>
                                 <Label Content="kW" FontSize="15" HorizontalAlignment="Left" Margin="459,117,0,0" VerticalAlignment="Top"/>
                                 <Label Content="minut" FontSize="15" HorizontalAlignment="Left" Margin="456,174,0,0" VerticalAlignment="Top"/>
@@ -142,18 +142,18 @@
                                 <TextBox x:Name="sliderTextboxLoznice" HorizontalAlignment="Left" Height="31" Margin="342,278,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="33" FontSize="20" Text="{Binding ElementName=slider2,Path=Value}"/>
                                 <Label Content="°C" HorizontalAlignment="Left" FontSize="20" Margin="380,274,0,0" VerticalAlignment="Top"/>
                                 <Label Content="Topení je" HorizontalAlignment="Left" FontSize="15" Margin="497,340,0,0" VerticalAlignment="Top"/>
-                                <Label x:Name="detailLozniceLabel" Content="vypnuto." FontSize="15" HorizontalAlignment="Left" Margin="567,340,0,0" VerticalAlignment="Top" Width="74" Loaded="detailLozniceLabel_Loaded"/>
-                                <Button Content="Zadat teplotu místnosti" HorizontalAlignment="Left" Margin="284,408,0,0" VerticalAlignment="Top" Width="167" Click="Button_Click_3" Height="28" FontSize="15"/>
+                                <Label x:Name="detailLozniceLabel" Content="vypnuto." FontSize="15" HorizontalAlignment="Left" Margin="567,340,0,0" VerticalAlignment="Top" Width="74" Loaded="DetailBedroomLabelShow"/>
+                                <Button Content="Zadat teplotu místnosti" HorizontalAlignment="Left" Margin="284,408,0,0" VerticalAlignment="Top" Width="167" Click="Button_Click_Bedroom" Height="28" FontSize="15"/>
                             </Grid>
                         </TabItem>
                         <TabItem Header="Koupelna" Margin="-3,39,1,-59">
                             <Grid Background="#FFE5E5E5">
                                 <Label Content="Aktuální teplota:" FontSize="15" HorizontalAlignment="Left" Margin="257,70,0,0" VerticalAlignment="Top"/>
-                                <TextBox x:Name="DetailTeplotaKoupelna" FontSize="15" HorizontalAlignment="Left" Height="23" Margin="419,74,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="32" Loaded="DetailTeplotaKoupelna_Loaded"/>
+                                <TextBox x:Name="DetailTeplotaKoupelna" FontSize="15" HorizontalAlignment="Left" Height="23" Margin="419,74,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="32" Loaded="DetailTemperatureBathroomShow"/>
                                 <Label Content="Aktuální spotřeba:" FontSize="15" HorizontalAlignment="Left" Margin="245,117,0,0" VerticalAlignment="Top"/>
-                                <TextBox x:Name="DetailSpotrebaKoupelna" HorizontalAlignment="Left" FontSize="15" Height="23" Margin="419,120,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="32" Loaded="DetailSpotrebaKoupelna_Loaded"/>
+                                <TextBox x:Name="DetailSpotrebaKoupelna" HorizontalAlignment="Left" FontSize="15" Height="23" Margin="419,120,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="32" Loaded="DetailConsumptionBathroomShow"/>
                                 <Label Content="Průměrná doba svícení za poslední týden:" FontSize="15" HorizontalAlignment="Left" Margin="91,174,0,0" VerticalAlignment="Top"/>
-                                <Label x:Name="sviceniLabelStatistika3" Content="" FontSize="15" HorizontalAlignment="Left" Margin="380,174,0,0" VerticalAlignment="Top" Width="71" Loaded="sviceniLabelStatistika3_Loaded"/>
+                                <Label x:Name="sviceniLabelStatistika3" Content="" FontSize="15" HorizontalAlignment="Left" Margin="380,174,0,0" VerticalAlignment="Top" Width="71" Loaded="LightingLabelStatisticsBathroom"/>
                                 <Label Content="°C" HorizontalAlignment="Left" FontSize="15" Margin="456,70,0,0" VerticalAlignment="Top"/>
                                 <Label Content="kW" FontSize="15" HorizontalAlignment="Left" Margin="459,117,0,0" VerticalAlignment="Top"/>
                                 <Label Content="minut" FontSize="15" HorizontalAlignment="Left" Margin="456,174,0,0" VerticalAlignment="Top"/>
@@ -162,18 +162,18 @@
                                 <TextBox x:Name="sliderTextboxKoupelna" HorizontalAlignment="Left" Height="31" Margin="342,278,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="33" FontSize="20" Text="{Binding ElementName=slider3,Path=Value}"/>
                                 <Label Content="°C" HorizontalAlignment="Left" FontSize="20" Margin="380,274,0,0" VerticalAlignment="Top"/>
                                 <Label Content="Topení je" HorizontalAlignment="Left" FontSize="15" Margin="497,340,0,0" VerticalAlignment="Top"/>
-                                <Label x:Name="detailKoupelnaLabel" Content="vypnuto." FontSize="15" HorizontalAlignment="Left" Margin="567,340,0,0" VerticalAlignment="Top" Width="74" Loaded="detailKoupelnaLabel_Loaded"/>
-                                <Button Content="Zadat teplotu místnosti" HorizontalAlignment="Left" Margin="284,408,0,0" VerticalAlignment="Top" Width="167" Click="Button_Click_4" Height="28" FontSize="15"/>
+                                <Label x:Name="detailKoupelnaLabel" Content="vypnuto." FontSize="15" HorizontalAlignment="Left" Margin="567,340,0,0" VerticalAlignment="Top" Width="74" Loaded="DetailBathroomLabelShow"/>
+                                <Button Content="Zadat teplotu místnosti" HorizontalAlignment="Left" Margin="284,408,0,0" VerticalAlignment="Top" Width="167" Click="Button_Click_Bathroom" Height="28" FontSize="15"/>
                             </Grid>
                         </TabItem>
                         <TabItem Header="Kuchyň" Margin="-3,59,1,-79">
                             <Grid Background="#FFE5E5E5">
                                 <Label Content="Aktuální teplota:" FontSize="15" HorizontalAlignment="Left" Margin="257,70,0,0" VerticalAlignment="Top"/>
-                                <TextBox x:Name="DetailTeplotaKuchyn" FontSize="15" HorizontalAlignment="Left" Height="23" Margin="419,74,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="32" Loaded="DetailTeplotaKuchyn_Loaded"/>
+                                <TextBox x:Name="DetailTeplotaKuchyn" FontSize="15" HorizontalAlignment="Left" Height="23" Margin="419,74,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="32" Loaded="DetailTemperatureKitchenShow"/>
                                 <Label Content="Aktuální spotřeba:" FontSize="15" HorizontalAlignment="Left" Margin="245,117,0,0" VerticalAlignment="Top"/>
-                                <TextBox x:Name="DetailSpotrebaKuchyn" HorizontalAlignment="Left" FontSize="15" Height="23" Margin="419,120,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="32" Loaded="DetailSpotrebaKuchyn_Loaded"/>
+                                <TextBox x:Name="DetailSpotrebaKuchyn" HorizontalAlignment="Left" FontSize="15" Height="23" Margin="419,120,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="32" Loaded="DetailConsumptionKitchenShow"/>
                                 <Label Content="Průměrná doba svícení za poslední týden:" FontSize="15" HorizontalAlignment="Left" Margin="91,174,0,0" VerticalAlignment="Top"/>
-                                <Label x:Name="sviceniLabelStatistika4" Content="" FontSize="15" HorizontalAlignment="Left" Margin="380,174,0,0" VerticalAlignment="Top" Width="71" Loaded="sviceniLabelStatistika4_Loaded"/>
+                                <Label x:Name="sviceniLabelStatistika4" Content="" FontSize="15" HorizontalAlignment="Left" Margin="380,174,0,0" VerticalAlignment="Top" Width="71" Loaded="LightingLabelStatisticsKitchen"/>
                                 <Label Content="°C" HorizontalAlignment="Left" FontSize="15" Margin="456,70,0,0" VerticalAlignment="Top"/>
                                 <Label Content="kW" FontSize="15" HorizontalAlignment="Left" Margin="459,117,0,0" VerticalAlignment="Top"/>
                                 <Label Content="minut" FontSize="15" HorizontalAlignment="Left" Margin="456,174,0,0" VerticalAlignment="Top"/>
@@ -182,8 +182,8 @@
                                 <TextBox x:Name="sliderTextboxKuchyn" HorizontalAlignment="Left" Height="31" Margin="342,278,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="33" FontSize="20" Text="{Binding ElementName=slider4,Path=Value}"/>
                                 <Label Content="°C" HorizontalAlignment="Left" FontSize="20" Margin="380,274,0,0" VerticalAlignment="Top"/>
                                 <Label Content="Topení je" HorizontalAlignment="Left" FontSize="15" Margin="497,340,0,0" VerticalAlignment="Top"/>
-                                <Label x:Name="detailKuchynLabel" Content="vypnuto." FontSize="15" HorizontalAlignment="Left" Margin="567,340,0,0" VerticalAlignment="Top" Width="74" Loaded="detailKuchynLabel_Loaded"/>
-                                <Button Content="Zadat teplotu místnosti" HorizontalAlignment="Left" Margin="284,408,0,0" VerticalAlignment="Top" Width="167" Click="Button_Click_5" Height="28" FontSize="15"/>
+                                <Label x:Name="detailKuchynLabel" Content="vypnuto." FontSize="15" HorizontalAlignment="Left" Margin="567,340,0,0" VerticalAlignment="Top" Width="74" Loaded="DetailKitchenLabelShow"/>
+                                <Button Content="Zadat teplotu místnosti" HorizontalAlignment="Left" Margin="284,408,0,0" VerticalAlignment="Top" Width="167" Click="Button_Click_Kitchen" Height="28" FontSize="15"/>
                             </Grid>
                         </TabItem>
                     </TabControl>
@@ -192,7 +192,7 @@
             </TabItem>
             <TabItem Header="Statistika spotřeba">
                 <Grid Background="#FFE5E5E5">
-                    <DVC:Chart Name="MyChart2" Title="Celková spotřeba energie [kW] za jednotlivé měsíce " Background="YellowGreen"  Margin="62,79,65,63" Loaded="MyChart2_Loaded" >
+                    <DVC:Chart Name="MyChart2" Title="Celková spotřeba energie [kW] za jednotlivé měsíce " Background="YellowGreen"  Margin="62,79,65,63" Loaded="Graph_PowerConsumption" >
                         <DVC:ColumnSeries Title=""  IndependentValueBinding="{Binding Path=Mesic}" DependentValueBinding="{Binding Path=Spotreba}">
                         </DVC:ColumnSeries>
                     </DVC:Chart>
@@ -200,7 +200,7 @@
             </TabItem>
             <TabItem Header="Statistika svícení">
                 <Grid Background="#FFE5E5E5">
-                    <DVC:Chart Name="MyChart3" Title="Průměrná doba svícení [minuty] v jednotlivých místnostech za jednotlivé měsíce" Background="YellowGreen"  Margin="61,123,66,19" Loaded="MyChart2_Loaded" >
+                    <DVC:Chart Name="MyChart3" Title="Průměrná doba svícení [minuty] v jednotlivých místnostech za jednotlivé měsíce" Background="YellowGreen"  Margin="61,123,66,19" Loaded="Graph_PowerConsumption" >
                         <DVC:ColumnSeries Title=""  IndependentValueBinding="{Binding Path=Mesic}" DependentValueBinding="{Binding Path=Prumerne_sviceni}">
                         </DVC:ColumnSeries>
                     </DVC:Chart>
@@ -210,7 +210,7 @@
                         <ComboBoxItem Content="Koupelna"/>
                         <ComboBoxItem Content="Kuchyň" />
                     </ComboBox>
-                    <Button Content="Zobrazit graf" HorizontalAlignment="Left" Margin="288,76,0,0" VerticalAlignment="Top" Width="105" Height="29" Click="Button_Click_1"/>
+                    <Button Content="Zobrazit graf" HorizontalAlignment="Left" Margin="288,76,0,0" VerticalAlignment="Top" Width="105" Height="29" Click="Graph_Lighting"/>
                     <Label Content="Vyber místnost:" HorizontalAlignment="Left" Margin="180,30,0,0" VerticalAlignment="Top"/>
                 </Grid>
             </TabItem>

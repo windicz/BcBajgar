@@ -210,14 +210,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ButtonClicks.cs" />
     <Compile Include="Cidla.cs">
       <DependentUpon>ISEntityFramework.tt</DependentUpon>
     </Compile>
+    <Compile Include="DetailShowData.cs" />
     <Compile Include="ISEntityFramework.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ISEntityFramework.tt</DependentUpon>
     </Compile>
+    <Compile Include="Graphs.cs" />
+    <Compile Include="SaveToDatabase.cs" />
+    <Compile Include="Statistics.cs" />
     <Compile Include="TeplotaConvertor.cs" />
     <Compile Include="Topeni.cs">
       <DependentUpon>ISEntityFramework.tt</DependentUpon>

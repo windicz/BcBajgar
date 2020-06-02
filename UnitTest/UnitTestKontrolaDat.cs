@@ -37,14 +37,14 @@ namespace UnitTest.Tests
             obj = new MainWindow();
             var sender = new Mock<object>();
             var args = new Mock<RoutedEventArgs>();
-            Assert.ThrowsException<Exception>(() => obj.ZvolitTeplotu(sender.Object, args.Object));
+            Assert.ThrowsException<Exception>(() => obj.Button_Click_SetTemperature(sender.Object, args.Object));
         }
         [TestMethod]
         [ExpectedException(typeof(Exception), "Vyjimka Vyhozena")]
         public void VyhozeniVyjimky()
         {
             obj = new MainWindow();
-            obj.ZapnutiTopeniVDatabazi();
+            obj.Database_TemperatureOn();
         }
     }
 }
