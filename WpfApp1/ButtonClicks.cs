@@ -109,7 +109,9 @@ namespace WpfApp1
             }
             catch (Exception)
             {
-                MessageBox.Show("musíš zadat jen číselnou hodnotu teploty");
+            //    MessageBox.Show("musíš zadat jen číselnou hodnotu teploty");
+                throw new Exception();
+               
             }
 
             Statistics_UpdateHeating();
