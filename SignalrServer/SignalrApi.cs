@@ -10,7 +10,7 @@ using Microsoft.Extensions.Logging;
 
 namespace SignalrServer
 {
-    public class Program
+    public class SignalrApi
     {
         public static void Main(string[] args)
         {
