@@ -54,8 +54,8 @@ namespace WpfApp1
                                       
                                   });
 
-             var timer = SetTimer(SendAllData, 1000);
-            //zapnutí teploty na vypnuto default
+             var timer = SetTimer(SendAllData, 10000);
+
             using (ISDatabaseEntities context = new ISDatabaseEntities())
             {
                 Topeni cus = new Topeni()
@@ -94,7 +94,6 @@ namespace WpfApp1
                                                ctvrtaTeplota.Content = str[9].Substring(str[9].IndexOf(':') + 1);
                                                ctvrtaSpotreba.Content = str[10].Substring(str[10].IndexOf(':') + 1);
                                                ctvrtaSviceni.Content = str[11].Substring(str[11].IndexOf(':') + 1);
-                                               //NEZAPOMENOUT ZAPNOUT NA ULOZENI DO DATABÁZE
                                                SaveAllData();
                                                DetailDataRefresh();
                                                TemperatureMainWindowRefresh();
