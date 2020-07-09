@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net462</TargetFramework>
+    <RootNamespace>Microsoft.Azure.Batch.Samples.MultiInstanceTasks</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="MPIHelloWorld\**" />
+    <Compile Remove="packages\**" />
+    <Compile Remove="x64\**" />
+    <EmbeddedResource Remove="MPIHelloWorld\**" />
+    <EmbeddedResource Remove="packages\**" />
+    <EmbeddedResource Remove="x64\**" />
+    <None Remove="MPIHelloWorld\**" />
+    <None Remove="packages\**" />
+    <None Remove="x64\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\Microsoft.Azure.Batch.Samples.Common.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Azure.Batch" Version="12.0.0" />
+    <PackageReference Include="WindowsAzure.Storage" Version="9.3.3" />
+  </ItemGroup>
+
+</Project>

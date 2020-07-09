@@ -1,0 +1,133 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Tomas.DESKTOP-AOOSVV9\\Desktop\\TOHLE POUZIVAM TEST 3 ZIP JSEM POUZIL ASI JAKO POSLEDNI\\azure-batch-samples-master\\CSharp\\ArticleProjects\\MultiInstanceTasks\\MultiInstanceTasks.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Tomas.DESKTOP-AOOSVV9\\Desktop\\TOHLE POUZIVAM TEST 3 ZIP JSEM POUZIL ASI JAKO POSLEDNI\\azure-batch-samples-master\\CSharp\\ArticleProjects\\MultiInstanceTasks\\MultiInstanceTasks.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Tomas.DESKTOP-AOOSVV9\\Desktop\\TOHLE POUZIVAM TEST 3 ZIP JSEM POUZIL ASI JAKO POSLEDNI\\azure-batch-samples-master\\CSharp\\ArticleProjects\\MultiInstanceTasks\\MultiInstanceTasks.csproj",
+        "projectName": "MultiInstanceTasks",
+        "projectPath": "C:\\Users\\Tomas.DESKTOP-AOOSVV9\\Desktop\\TOHLE POUZIVAM TEST 3 ZIP JSEM POUZIL ASI JAKO POSLEDNI\\azure-batch-samples-master\\CSharp\\ArticleProjects\\MultiInstanceTasks\\MultiInstanceTasks.csproj",
+        "packagesPath": "C:\\Users\\Tomas.DESKTOP-AOOSVV9\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Tomas.DESKTOP-AOOSVV9\\Desktop\\TOHLE POUZIVAM TEST 3 ZIP JSEM POUZIL ASI JAKO POSLEDNI\\azure-batch-samples-master\\CSharp\\ArticleProjects\\MultiInstanceTasks\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Tomas.DESKTOP-AOOSVV9\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net462"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net462": {
+            "projectReferences": {
+              "C:\\Users\\Tomas.DESKTOP-AOOSVV9\\Desktop\\TOHLE POUZIVAM TEST 3 ZIP JSEM POUZIL ASI JAKO POSLEDNI\\azure-batch-samples-master\\CSharp\\Common\\Microsoft.Azure.Batch.Samples.Common.csproj": {
+                "projectPath": "C:\\Users\\Tomas.DESKTOP-AOOSVV9\\Desktop\\TOHLE POUZIVAM TEST 3 ZIP JSEM POUZIL ASI JAKO POSLEDNI\\azure-batch-samples-master\\CSharp\\Common\\Microsoft.Azure.Batch.Samples.Common.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net462": {
+          "dependencies": {
+            "Microsoft.Azure.Batch": {
+              "target": "Package",
+              "version": "[12.0.0, )"
+            },
+            "WindowsAzure.Storage": {
+              "target": "Package",
+              "version": "[9.3.3, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "win7-x86": {
+          "#import": []
+        }
+      }
+    },
+    "C:\\Users\\Tomas.DESKTOP-AOOSVV9\\Desktop\\TOHLE POUZIVAM TEST 3 ZIP JSEM POUZIL ASI JAKO POSLEDNI\\azure-batch-samples-master\\CSharp\\Common\\Microsoft.Azure.Batch.Samples.Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Tomas.DESKTOP-AOOSVV9\\Desktop\\TOHLE POUZIVAM TEST 3 ZIP JSEM POUZIL ASI JAKO POSLEDNI\\azure-batch-samples-master\\CSharp\\Common\\Microsoft.Azure.Batch.Samples.Common.csproj",
+        "projectName": "Microsoft.Azure.Batch.Samples.Common",
+        "projectPath": "C:\\Users\\Tomas.DESKTOP-AOOSVV9\\Desktop\\TOHLE POUZIVAM TEST 3 ZIP JSEM POUZIL ASI JAKO POSLEDNI\\azure-batch-samples-master\\CSharp\\Common\\Microsoft.Azure.Batch.Samples.Common.csproj",
+        "packagesPath": "C:\\Users\\Tomas.DESKTOP-AOOSVV9\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Tomas.DESKTOP-AOOSVV9\\Desktop\\TOHLE POUZIVAM TEST 3 ZIP JSEM POUZIL ASI JAKO POSLEDNI\\azure-batch-samples-master\\CSharp\\Common\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Tomas.DESKTOP-AOOSVV9\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net462"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net462": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net462": {
+          "dependencies": {
+            "Microsoft.Azure.Batch": {
+              "target": "Package",
+              "version": "[12.0.0, )"
+            },
+            "Microsoft.Azure.Batch.FileStaging": {
+              "target": "Package",
+              "version": "[8.3.0, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Binder": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
+            "WindowsAzure.Storage": {
+              "target": "Package",
+              "version": "[9.3.3, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
