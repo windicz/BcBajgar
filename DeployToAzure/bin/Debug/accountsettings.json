@@ -1,0 +1,8 @@
+﻿{
+  "batchAccountName": "batchapp123",
+  "batchAccountKey": "ya9ohD/BVThKZN1Lye1CfG/qUOptYPLDpYHO7xpbwCA0BA5JNTo7aIkD5MFO0TNxmhZjSgAkvkdP1UQb5h6m4Q==",
+  "batchServiceUrl": "https://batchapp123.westeurope.batch.azure.com",
+  "storageAccountName": "batchstorage123",
+  "storageAccountKey": "SOucpY5aRWeHhuHG/4Qur6/Kpr4/qdPxfCrrin5f197eLEgTIIpLPiYwGpRN57JmQGRSV1ZiPHLUxmNGgX+UEw==",
+  "storageServiceUrl": "https://batchstorage123.file.core.windows.net"
+}

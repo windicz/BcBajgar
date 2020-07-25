@@ -1,0 +1,8 @@
+﻿  ParallelMpiApp.cpp
+C:\Users\Tomas.DESKTOP-AOOSVV9\Desktop\final 2\ParallelMpiApp\ParallelMpiApp\ParallelMpiApp.cpp(28,26): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+  Generating code
+  1 of 7 functions (14.3%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  ParallelMpiApp.vcxproj -> C:\Users\Tomas.DESKTOP-AOOSVV9\Desktop\final 2\ParallelMpiApp\x64\Release\ParallelMpiApp.exe

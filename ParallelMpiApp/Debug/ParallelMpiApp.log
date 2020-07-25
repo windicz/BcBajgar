@@ -1,0 +1,9 @@
+﻿ParallelMpiApp.obj : error LNK2019: unresolved external symbol _MPI_Send@24 referenced in function _main
+ParallelMpiApp.obj : error LNK2019: unresolved external symbol _MPI_Recv@28 referenced in function _main
+ParallelMpiApp.obj : error LNK2019: unresolved external symbol _MPI_Comm_size@8 referenced in function _main
+ParallelMpiApp.obj : error LNK2019: unresolved external symbol _MPI_Comm_rank@8 referenced in function _main
+ParallelMpiApp.obj : error LNK2019: unresolved external symbol _MPI_Wtime@0 referenced in function _main
+ParallelMpiApp.obj : error LNK2019: unresolved external symbol _MPI_Init@8 referenced in function _main
+ParallelMpiApp.obj : error LNK2019: unresolved external symbol _MPI_Finalize@0 referenced in function _main
+C:\Users\Tomas.DESKTOP-AOOSVV9\Desktop\asi finalni aplikace do bakalarky\ParallelMpiApp\\packages\MPI\Lib\x64\msmpi.lib : warning LNK4272: library machine type 'x64' conflicts with target machine type 'x86'
+C:\Users\Tomas.DESKTOP-AOOSVV9\Desktop\asi finalni aplikace do bakalarky\ParallelMpiApp\Debug\ParallelMpiApp.exe : fatal error LNK1120: 7 unresolved externals

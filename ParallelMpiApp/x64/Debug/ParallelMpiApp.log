@@ -1,0 +1,3 @@
+﻿  ParallelMpiApp.cpp
+C:\Users\Tomas.DESKTOP-AOOSVV9\Desktop\asi finalni aplikace do bakalarky\ParallelMpiApp\ParallelMpiApp\ParallelMpiApp.cpp(30,20): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+  ParallelMpiApp.vcxproj -> C:\Users\Tomas.DESKTOP-AOOSVV9\Desktop\asi finalni aplikace do bakalarky\ParallelMpiApp\x64\Debug\ParallelMpiApp.exe
